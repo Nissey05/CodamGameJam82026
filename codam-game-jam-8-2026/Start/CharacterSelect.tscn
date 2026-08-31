@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cxuqyodhhv16l"]
+
+[ext_resource type="Script" uid="uid://be584x06ktgx3" path="res://Start/CharacterSelectButton.gd" id="1_qoymb"]
+
+[node name="CharacterSelect" type="Control" unique_id=914135635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cook" type="Button" parent="." unique_id=552311173]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 475.0
+offset_right = 296.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[node name="Miller" type="Button" parent="." unique_id=1407465704]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 475.0
+offset_right = 144.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[node name="Tanner" type="Button" parent="." unique_id=801377479]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 475.0
+offset_right = 482.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[node name="Smith" type="Button" parent="." unique_id=1659979413]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 475.0
+offset_right = 672.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[node name="Tailor" type="Button" parent="." unique_id=1059924991]
+layout_mode = 0
+offset_left = 751.0
+offset_top = 475.0
+offset_right = 849.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[node name="Abbot" type="Button" parent="." unique_id=1114958702]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 475.0
+offset_right = 1017.0
+offset_bottom = 506.0
+text = "Select"
+script = ExtResource("1_qoymb")
+
+[connection signal="pressed" from="Cook" to="Cook" method="_on_pressed"]
+[connection signal="pressed" from="Miller" to="Miller" method="_on_pressed"]
+[connection signal="pressed" from="Tanner" to="Tanner" method="_on_pressed"]
+[connection signal="pressed" from="Smith" to="Smith" method="_on_pressed"]
+[connection signal="pressed" from="Tailor" to="Tailor" method="_on_pressed"]
+[connection signal="pressed" from="Abbot" to="Abbot" method="_on_pressed"]
