@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dcu5r1tgfjx1c"]
+
+[ext_resource type="Script" uid="uid://cnoec3dcmaqla" path="res://Start/start_button.gd" id="1_cha0i"]
+
+[node name="Starts" type="Control" unique_id=1016202519]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1590879669]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = 453.0
+offset_top = 440.0
+offset_right = 673.936
+offset_bottom = 560.224
+text = "START"
+script = ExtResource("1_cha0i")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

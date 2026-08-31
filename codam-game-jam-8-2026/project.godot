@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Codam Game Jam 8 2026"
-run/main_scene="uid://rk62jlerh05f"
+run/main_scene="uid://dcu5r1tgfjx1c"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Game/icon.svg"
 
 [display]
 
@@ -42,3 +42,4 @@ actionLeft={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
