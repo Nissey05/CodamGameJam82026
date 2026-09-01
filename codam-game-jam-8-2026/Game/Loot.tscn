@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dajhdbddncn0c"]
+
+[ext_resource type="Script" uid="uid://co73de2lyyudr" path="res://Game/loot.gd" id="1_053gm"]
+[ext_resource type="Script" uid="uid://cdvtkdgkmqsu5" path="res://Game/item.gd" id="2_24x85"]
+
+[node name="Loot" type="Node2D" unique_id=726387915]
+script = ExtResource("1_053gm")
+
+[node name="Shop" type="Control" parent="." unique_id=847459463]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Item1" type="Button" parent="Shop" unique_id=1618191787]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.1
+offset_left = 126.0
+offset_top = 71.0
+offset_right = 175.0
+offset_bottom = 105.0
+script = ExtResource("2_24x85")
+
+[node name="Item2" type="Button" parent="Shop" unique_id=617196438]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.1
+offset_left = 251.0
+offset_top = 71.0
+offset_right = 300.0
+offset_bottom = 105.0
+script = ExtResource("2_24x85")
+
+[node name="Item3" type="Button" parent="Shop" unique_id=1030628935]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.1
+offset_left = 378.0
+offset_top = 68.0
+offset_right = 427.0
+offset_bottom = 102.0
+script = ExtResource("2_24x85")
+
+[node name="PopupMenu" type="PopupMenu" parent="Shop" unique_id=706789421]
+
+[connection signal="pressed" from="Shop/Item1" to="Shop/Item1" method="_on_pressed"]
