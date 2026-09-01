@@ -18,6 +18,7 @@ texture = ExtResource("2_fuqhk")
 
 [node name="Enemy" type="Node2D" parent="." unique_id=984039235]
 script = ExtResource("3_37esa")
+hp = 5
 
 [node name="Sprite2D2" type="Sprite2D" parent="Enemy" unique_id=1236149616]
 visibility_layer = 524288
@@ -32,6 +33,7 @@ offset_top = 294.0
 offset_right = 540.0
 offset_bottom = 334.0
 script = ExtResource("5_ghvq8")
+dice_count = 1
 
 [node name="Health" type="RichTextLabel" parent="Enemy" unique_id=1707332888]
 offset_left = 1359.0
@@ -56,6 +58,7 @@ offset_top = 550.0
 offset_right = 540.0
 offset_bottom = 590.0
 script = ExtResource("5_ghvq8")
+dice_count = 1
 
 [node name="Button" type="Button" parent="Player/Dice" unique_id=1537262163]
 layout_mode = 0
