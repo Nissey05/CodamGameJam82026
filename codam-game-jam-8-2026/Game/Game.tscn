@@ -56,7 +56,6 @@ offset_top = 550.0
 offset_right = 540.0
 offset_bottom = 590.0
 script = ExtResource("5_ghvq8")
-dice_count = 5
 
 [node name="Button" type="Button" parent="Player/Dice" unique_id=1537262163]
 layout_mode = 0

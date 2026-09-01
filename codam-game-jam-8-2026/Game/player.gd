@@ -4,7 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hp = 10
+	pass
 
 
 func _on_enemy_player_damage(damage: int) -> void:
