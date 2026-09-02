@@ -15,13 +15,10 @@ var rolled_items : Array = []
 signal items_rolled
 
 func _ready() -> void:
-	var item = _roll_item()
-	print(item)
-	rolled_items.append(item)
-	item = _roll_item()
-	rolled_items.append(item)
-	item = _roll_item()
-	rolled_items.append(item)
+	rolled_items.append(_roll_item())
+	rolled_items.append(_roll_item())
+	rolled_items.append(_roll_item())
+	$Shop/Chips.text = str(PlayerData.health)
 	items_rolled.emit()
 
 
@@ -41,3 +38,7 @@ func _roll_item() -> String:
 
 func _on_continue_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on__item_bought() -> void:
+	$Shop/Chips.text = str(PlayerData.health)

@@ -11,4 +11,4 @@ func _on_enemy_player_damage(damage: int) -> void:
 	PlayerData.damage_event(damage)
 	$Health.text = str(PlayerData.health)
 	if (PlayerData.health <= 0):
-		print("You Lose!")
+		SceneManager.goto_death()

@@ -3,16 +3,16 @@ extends Button
 func _on_pressed() -> void:
 	match self.name:
 		"Cook":
-			print("Cook")
+			PlayerData.health = 10
 		"Miller":
-			print("Miller")
+			PlayerData.health = 10
 		"Tanner":
-			print("Tanner")
+			PlayerData.health = 10
 		"Smith":
-			print("Smith")
+			PlayerData.health = 10
 		"Tailor":
-			print("Tailor")
+			PlayerData.health = 10
 		"Abbot":
-			print("Abbot")
+			PlayerData.health = 10
 		
 	get_tree().change_scene_to_file("res://Game/Game.tscn")

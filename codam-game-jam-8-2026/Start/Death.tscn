@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://coari6gc5sma6"]
+
+[ext_resource type="Script" uid="uid://t3p4ub682a8i" path="res://Start/retry_button.gd" id="1_3s8e0"]
+
+[node name="Death" type="Node2D" unique_id=688206601]
+
+[node name="RetryButton" type="Button" parent="." unique_id=744811604]
+offset_left = 620.0
+offset_top = 609.0
+offset_right = 1008.0
+offset_bottom = 786.0
+text = "Retry"
+script = ExtResource("1_3s8e0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1977284263]
+offset_left = 560.0
+offset_top = 255.0
+offset_right = 1014.9059
+offset_bottom = 411.2539
+theme_override_font_sizes/normal_font_size = 100
+text = "You Died"
+
+[connection signal="pressed" from="RetryButton" to="RetryButton" method="_on_pressed"]
