@@ -1,9 +1,9 @@
-extends RichTextLabel
+extends PopupMenu
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	text = str(get_parent().hp)
+	self.popup(Rect2i(50, 50, 50, 50))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

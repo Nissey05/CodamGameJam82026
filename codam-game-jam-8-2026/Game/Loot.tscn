@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://co73de2lyyudr" path="res://Game/loot.gd" id="1_053gm"]
 [ext_resource type="Script" uid="uid://cdvtkdgkmqsu5" path="res://Game/item.gd" id="2_24x85"]
+[ext_resource type="Script" uid="uid://b1senos2igbk4" path="res://Game/continue.gd" id="3_m6h54"]
 
 [node name="Loot" type="Node2D" unique_id=726387915]
 script = ExtResource("1_053gm")
@@ -12,7 +13,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Item1" type="Button" parent="Shop" unique_id=1618191787]
+[node name="0" type="Button" parent="Shop" unique_id=1618191787]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
@@ -22,26 +23,39 @@ offset_right = 175.0
 offset_bottom = 105.0
 script = ExtResource("2_24x85")
 
-[node name="Item2" type="Button" parent="Shop" unique_id=617196438]
+[node name="1" type="Button" parent="Shop" unique_id=617196438]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
-offset_left = 251.0
-offset_top = 71.0
-offset_right = 300.0
-offset_bottom = 105.0
+offset_left = 354.0
+offset_top = 69.0
+offset_right = 403.0
+offset_bottom = 103.0
 script = ExtResource("2_24x85")
 
-[node name="Item3" type="Button" parent="Shop" unique_id=1030628935]
+[node name="2" type="Button" parent="Shop" unique_id=1030628935]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
-offset_left = 378.0
+offset_left = 541.0
 offset_top = 68.0
-offset_right = 427.0
+offset_right = 590.0
 offset_bottom = 102.0
 script = ExtResource("2_24x85")
 
-[node name="PopupMenu" type="PopupMenu" parent="Shop" unique_id=706789421]
+[node name="Continue" type="Button" parent="Shop" unique_id=1680075734]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 694.0
+offset_right = 1243.0
+offset_bottom = 824.0
+text = "Continue"
+script = ExtResource("3_m6h54")
 
-[connection signal="pressed" from="Shop/Item1" to="Shop/Item1" method="_on_pressed"]
+[connection signal="items_rolled" from="." to="Shop/0" method="_on_loot_items_rolled"]
+[connection signal="items_rolled" from="." to="Shop/1" method="_on_loot_items_rolled"]
+[connection signal="items_rolled" from="." to="Shop/2" method="_on_loot_items_rolled"]
+[connection signal="pressed" from="Shop/0" to="Shop/0" method="_on_pressed"]
+[connection signal="pressed" from="Shop/1" to="Shop/1" method="_on_pressed"]
+[connection signal="pressed" from="Shop/2" to="Shop/2" method="_on_pressed"]
+[connection signal="pressed" from="Shop/Continue" to="Shop/Continue" method="_on_pressed"]
