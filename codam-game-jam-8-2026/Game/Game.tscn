@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://rk62jlerh05f"]
 
 [ext_resource type="Script" uid="uid://cj72f2mfc6p0a" path="res://Game/start.gd" id="1_xkndl"]
-[ext_resource type="Texture2D" uid="uid://ch6faodwn51vu" path="res://Game/table.png" id="2_fuqhk"]
+[ext_resource type="Texture2D" uid="uid://ch6faodwn51vu" path="res://assets/table.png" id="2_fuqhk"]
 [ext_resource type="Script" uid="uid://brb7ospdibcwt" path="res://Game/roll_button.gd" id="2_u44n3"]
 [ext_resource type="Script" uid="uid://i3wirw1ty01d" path="res://Game/enemy.gd" id="3_37esa"]
-[ext_resource type="Texture2D" uid="uid://c2ce81l1nto1d" path="res://Game/icon.svg" id="4_jxerj"]
+[ext_resource type="Texture2D" uid="uid://c2ce81l1nto1d" path="res://assets/icon.svg" id="4_jxerj"]
 [ext_resource type="Script" uid="uid://3lsim180rsme" path="res://Game/player.gd" id="5_fuqhk"]
 [ext_resource type="Script" uid="uid://cs0j7nm2gn7bo" path="res://Game/dice.gd" id="5_ghvq8"]
 [ext_resource type="Script" uid="uid://b0efggnbbfhxa" path="res://Game/health.gd" id="6_oscxy"]
@@ -33,7 +33,6 @@ offset_top = 294.0
 offset_right = 540.0
 offset_bottom = 334.0
 script = ExtResource("5_ghvq8")
-dice_count = 1
 
 [node name="Health" type="RichTextLabel" parent="Enemy" unique_id=1707332888]
 offset_left = 1359.0
@@ -58,7 +57,6 @@ offset_top = 550.0
 offset_right = 540.0
 offset_bottom = 590.0
 script = ExtResource("5_ghvq8")
-dice_count = 1
 
 [node name="Button" type="Button" parent="Player/Dice" unique_id=1537262163]
 layout_mode = 0

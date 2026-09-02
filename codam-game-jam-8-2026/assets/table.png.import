@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://liy2wb0q855u"
-path="res://.godot/imported/tilegrid.png-78744c94d3910b4e4d7f213e27046f3d.ctex"
+uid="uid://ch6faodwn51vu"
+path="res://.godot/imported/table.png-14b755b19e8ff9a139cf951e8fcb8e14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilegrid.png"
-dest_files=["res://.godot/imported/tilegrid.png-78744c94d3910b4e4d7f213e27046f3d.ctex"]
+source_file="res://assets/table.png"
+dest_files=["res://.godot/imported/table.png-14b755b19e8ff9a139cf951e8fcb8e14.ctex"]
 
 [params]
 
