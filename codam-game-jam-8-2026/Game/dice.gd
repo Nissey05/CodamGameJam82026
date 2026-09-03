@@ -14,24 +14,23 @@ func _create_die() -> PanelContainer:
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	die.add_child(label)
 	die.set_script(load("res://Game/die.gd"))
-	print(die.get_script())
 
 	return die
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print("parent ", get_parent().name, " Dice_count: ", get_parent().dice_count)
 	for i in get_parent().dice_count:
 		dice.append(_create_die())
 		dice[i].position += Vector2(i * 50, 0)
 		add_child(dice[i])
-		print(i)
 
 signal damage_event(damage : int)
 
 func _roll_all() -> int:
 	var total = 0
 	for i in get_parent().dice_count:
-		total += dice[i]._roll()
+		total += dice[i]._roll(get_parent().inventory[i])
 	if get_parent().name == "Player":
 		damage_event.emit(total)
 	return total

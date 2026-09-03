@@ -8,19 +8,21 @@
 [ext_resource type="Script" uid="uid://3lsim180rsme" path="res://Game/player.gd" id="5_fuqhk"]
 [ext_resource type="Script" uid="uid://cs0j7nm2gn7bo" path="res://Game/dice.gd" id="5_ghvq8"]
 [ext_resource type="Script" uid="uid://b0efggnbbfhxa" path="res://Game/health.gd" id="6_oscxy"]
+[ext_resource type="Texture2D" uid="uid://uqwdgqpoo5lo" path="res://assets/chip_white_1.png" id="9_gp3ee"]
+[ext_resource type="Texture2D" uid="uid://dt2st7nng7s44" path="res://assets/chip_red_5.png" id="10_r0byk"]
+[ext_resource type="Texture2D" uid="uid://be8supqryha37" path="res://assets/chip_green_25.png" id="11_hmm1m"]
 
 [node name="Game" type="Node2D" unique_id=2114010584]
 script = ExtResource("1_xkndl")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1861623887]
+[node name="Background" type="Sprite2D" parent="." unique_id=1861623887]
 position = Vector2(800, 450)
 texture = ExtResource("2_fuqhk")
 
 [node name="Enemy" type="Node2D" parent="." unique_id=984039235]
 script = ExtResource("3_37esa")
-hp = 5
 
-[node name="Sprite2D2" type="Sprite2D" parent="Enemy" unique_id=1236149616]
+[node name="EnemySprite" type="Sprite2D" parent="Enemy" unique_id=1236149616]
 visibility_layer = 524288
 position = Vector2(788, 104)
 texture = ExtResource("4_jxerj")
@@ -67,18 +69,28 @@ offset_bottom = 208.0
 text = "ROLL"
 script = ExtResource("2_u44n3")
 
-[node name="Health" type="RichTextLabel" parent="Player" unique_id=1021735122]
-offset_left = 1358.0
-offset_top = 657.0
+[node name="Health" type="Container" parent="." unique_id=815854310]
+offset_left = 1350.0
+offset_top = 650.0
 offset_right = 1570.0
-offset_bottom = 871.0
-theme_override_font_sizes/normal_font_size = 50
-text = "0"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_oscxy")
+offset_bottom = 870.0
+
+[node name="1" type="Sprite2D" parent="Health" unique_id=949679701]
+position = Vector2(49.00006, 149)
+scale = Vector2(3.2374966, 3.2374966)
+texture = ExtResource("9_gp3ee")
+
+[node name="5" type="Sprite2D" parent="Health" unique_id=559604517]
+position = Vector2(113, 71)
+scale = Vector2(3.2374966, 3.2374966)
+texture = ExtResource("10_r0byk")
+
+[node name="25" type="Sprite2D" parent="Health" unique_id=1343249322]
+position = Vector2(179, 128)
+scale = Vector2(3.2374966, 3.2374966)
+texture = ExtResource("11_hmm1m")
 
 [connection signal="player_damage" from="Enemy" to="Player" method="_on_enemy_player_damage"]
+[connection signal="tree_entered" from="Enemy" to="Enemy" method="_on_tree_entered"]
 [connection signal="damage_event" from="Player/Dice" to="Enemy" method="_on_dice_damage_event"]
 [connection signal="pressed" from="Player/Dice/Button" to="Player/Dice/Button" method="_on_pressed"]

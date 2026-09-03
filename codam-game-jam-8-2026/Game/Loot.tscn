@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://co73de2lyyudr" path="res://Game/loot.gd" id="1_053gm"]
 [ext_resource type="Script" uid="uid://cdvtkdgkmqsu5" path="res://Game/item.gd" id="2_24x85"]
+[ext_resource type="Texture2D" uid="uid://ch6faodwn51vu" path="res://assets/table.png" id="2_63yi3"]
 [ext_resource type="Script" uid="uid://b1senos2igbk4" path="res://Game/continue.gd" id="3_m6h54"]
 
 [node name="Loot" type="Node2D" unique_id=726387915]
 script = ExtResource("1_053gm")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=313869933]
+position = Vector2(800, 450)
+texture = ExtResource("2_63yi3")
 
 [node name="Shop" type="Control" parent="." unique_id=847459463]
 layout_mode = 3
@@ -17,30 +22,30 @@ offset_bottom = 40.0
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
-offset_left = 126.0
-offset_top = 71.0
-offset_right = 175.0
-offset_bottom = 105.0
+offset_left = 487.0
+offset_top = 265.0
+offset_right = 536.0
+offset_bottom = 299.0
 script = ExtResource("2_24x85")
 
 [node name="1" type="Button" parent="Shop" unique_id=617196438]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
-offset_left = 354.0
-offset_top = 69.0
-offset_right = 403.0
-offset_bottom = 103.0
+offset_left = 708.0
+offset_top = 261.0
+offset_right = 757.0
+offset_bottom = 295.0
 script = ExtResource("2_24x85")
 
 [node name="2" type="Button" parent="Shop" unique_id=1030628935]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.1
-offset_left = 541.0
-offset_top = 68.0
-offset_right = 590.0
-offset_bottom = 102.0
+offset_left = 926.0
+offset_top = 259.0
+offset_right = 975.0
+offset_bottom = 293.0
 script = ExtResource("2_24x85")
 
 [node name="Continue" type="Button" parent="Shop" unique_id=1680075734]
@@ -62,16 +67,7 @@ offset_bottom = 540.0
 [connection signal="items_rolled" from="." to="Shop/0" method="_on_loot_items_rolled"]
 [connection signal="items_rolled" from="." to="Shop/1" method="_on_loot_items_rolled"]
 [connection signal="items_rolled" from="." to="Shop/2" method="_on_loot_items_rolled"]
-[connection signal="item_bought" from="Shop/0" to="." method="_on__item_bought"]
-[connection signal="item_bought" from="Shop/0" to="Shop/1" method="_on_item_bought"]
-[connection signal="item_bought" from="Shop/0" to="Shop/2" method="_on_item_bought"]
 [connection signal="pressed" from="Shop/0" to="Shop/0" method="_on_pressed"]
-[connection signal="item_bought" from="Shop/1" to="." method="_on__item_bought"]
-[connection signal="item_bought" from="Shop/1" to="Shop/0" method="_on_item_bought"]
-[connection signal="item_bought" from="Shop/1" to="Shop/2" method="_on_item_bought"]
 [connection signal="pressed" from="Shop/1" to="Shop/1" method="_on_pressed"]
-[connection signal="item_bought" from="Shop/2" to="." method="_on__item_bought"]
-[connection signal="item_bought" from="Shop/2" to="Shop/0" method="_on_item_bought"]
-[connection signal="item_bought" from="Shop/2" to="Shop/1" method="_on_item_bought"]
 [connection signal="pressed" from="Shop/2" to="Shop/2" method="_on_pressed"]
 [connection signal="pressed" from="Shop/Continue" to="Shop/Continue" method="_on_pressed"]

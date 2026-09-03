@@ -1,10 +1,16 @@
 extends Node2D
 
-@export var hp = 10
-
+var hp = 10
 var dice_count = 1
+var inventory = []
 
 var pot = 0
+
+var enemies = {
+	1 : {"health" : 5, "inventory" : ["D6"]},
+	2 : {"health" : 30, "inventory" : ["D3", "D3", "D3"]},
+	3 : {"health" : 50, "inventory" : ["D6", "D12"]}
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,5 +33,13 @@ func _on_dice_damage_event(damage: int) -> void:
 			pot += tot - damage
 		if (hp <= 0):
 			PlayerData.add_health(pot)
+			GameData.level += 1
 			SceneManager.goto_loot()
 			
+
+
+func _on_tree_entered() -> void:
+	hp = enemies[GameData.level]["health"]
+	inventory = enemies[GameData.level]["inventory"]
+	dice_count = len(inventory)
+	print(inventory, " ", dice_count)

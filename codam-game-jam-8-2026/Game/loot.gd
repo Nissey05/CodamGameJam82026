@@ -2,19 +2,25 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 
-var dict = {
-	"Dice1" : {"price": 5, "imageLocation" : "res://1.png"},
-	"Dice2" : {"price": 10, "imageLocation" : "res://2.png"},
-	"Dice3" : {"price": 20, "imageLocation" : "res://3.png"}
-}
-
-var table : Array = ["Dice1", "Dice2", "Dice3"]
+var table : Array = []
 
 var rolled_items : Array = []
 
 signal items_rolled
 
+func _add_dice_to_table() -> void:
+	var dict = GameData.dice
+	for i in dict["D3"]["weight"]:
+		table.append("D3")
+	for i in dict["D6"]["weight"]:
+		table.append("D6")
+	for i in dict["D12"]["weight"]:
+		table.append("D12")
+	for i in dict["D20"]["weight"]:
+		table.append("D20")
+
 func _ready() -> void:
+	_add_dice_to_table()
 	rolled_items.append(_roll_item())
 	rolled_items.append(_roll_item())
 	rolled_items.append(_roll_item())

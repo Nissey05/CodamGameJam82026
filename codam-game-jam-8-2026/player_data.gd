@@ -1,7 +1,7 @@
 extends Node
 
 var health: int = 10
-var inventory: Array = ["Dice1"]
+var inventory: Array = ["D6"]
 
 func damage_event(amount: int) -> void:
 	health = max(0, health - amount)

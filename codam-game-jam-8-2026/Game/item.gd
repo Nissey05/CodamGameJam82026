@@ -25,11 +25,11 @@ func _on_pressed() -> void:
 
 func _on_loot_items_rolled() -> void:
 	item = loot_distrib.rolled_items[int(name)]
-	icon = load(loot_distrib.dict[item]["imageLocation"])
-	text = str(loot_distrib.dict[item]["price"])
-	if (PlayerData.health < loot_distrib.dict[item]["price"]):
+	icon = load(GameData.dice[item]["imageLocation"])
+	text = str(GameData.dice[item]["price"])
+	if (PlayerData.health < GameData.dice[item]["price"]):
 		add_theme_color_override("font_color", Color.DARK_RED)
 
 func _on_item_bought() -> void:
-	if (PlayerData.health < loot_distrib.dict[item]["price"]):
+	if (PlayerData.health < GameData.dice[item]["price"]):
 		add_theme_color_override("font_color", Color.DARK_RED)

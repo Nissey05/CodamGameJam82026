@@ -8,9 +8,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _roll() -> int:
+var diceValues = {
+	"D3" : 3,
+	"D6" : 6,
+	"D12" : 12,
+	"D20" : 20,
+}
+
+func _roll(diceType : String) -> int:
 	var rng = RandomNumberGenerator.new()
 	rng.seed = hash(Time.get_ticks_usec())
-	var nb = rng.randi_range(1, 6)
+	var nb = rng.randi_range(1, diceValues[diceType])
 	$label.text = str(nb)
+	print("Rolled: ", nb)
 	return nb
