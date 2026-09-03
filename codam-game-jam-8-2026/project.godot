@@ -19,7 +19,7 @@ config/icon="res://assets/icon.svg"
 
 PlayerData="*uid://bd8lbonwqxdxj"
 SceneManager="*uid://bsmgw1v32aper"
-
+MenuManager="*res://MenuManager.gd"
 [display]
 
 window/size/viewport_width=1600
