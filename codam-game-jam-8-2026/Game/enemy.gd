@@ -27,7 +27,7 @@ func _on_dice_damage_event(damage: int) -> void:
 		if (tot < damage):
 			hp -= damage - tot
 			pot += damage - tot
-			$Health.text = str(hp)
+			$Health.draw_hp()
 		elif (tot > damage):
 			player_damage.emit(tot - damage)
 			pot += tot - damage
@@ -42,4 +42,3 @@ func _on_tree_entered() -> void:
 	hp = enemies[GameData.level]["health"]
 	inventory = enemies[GameData.level]["inventory"]
 	dice_count = len(inventory)
-	print(inventory, " ", dice_count)

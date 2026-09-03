@@ -27,12 +27,15 @@ func _ready() -> void:
 
 signal damage_event(damage : int)
 
+signal set_text(str : String)
+
 func _roll_all() -> int:
 	var total = 0
 	for i in get_parent().dice_count:
 		total += dice[i]._roll(get_parent().inventory[i])
 	if get_parent().name == "Player":
 		damage_event.emit(total)
+	set_text.emit(str(total))
 	return total
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

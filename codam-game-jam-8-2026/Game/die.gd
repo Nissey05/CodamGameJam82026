@@ -20,5 +20,4 @@ func _roll(diceType : String) -> int:
 	rng.seed = hash(Time.get_ticks_usec())
 	var nb = rng.randi_range(1, diceValues[diceType])
 	$label.text = str(nb)
-	print("Rolled: ", nb)
 	return nb

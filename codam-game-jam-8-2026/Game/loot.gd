@@ -32,8 +32,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-#func _get_rolled_item() -> String:
-
 func _roll_item() -> String:
 	var rng = RandomNumberGenerator.new()
 	rng.seed = hash(Time.get_ticks_usec())
