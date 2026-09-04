@@ -12,8 +12,6 @@ func _ready() -> void:
 	pass
 
 func _roll(diceType : String) -> int:
-	var rng = RandomNumberGenerator.new()
-	rng.seed = hash(Time.get_ticks_usec())
-	var nb = rng.randi_range(1, diceValues[diceType])
+	var nb = Rng.rng.randi_range(1, diceValues[diceType])
 	$label.text = str(nb)
 	return nb

@@ -21,6 +21,7 @@ PlayerData="*uid://bd8lbonwqxdxj"
 SceneManager="*uid://bsmgw1v32aper"
 MenuManager="*res://MenuManager.gd"
 GameData="*uid://b1gdbvaui1ocd"
+Rng="*uid://c5sapdjcibdd7"
 
 [display]
 

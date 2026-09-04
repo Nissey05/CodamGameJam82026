@@ -34,9 +34,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _roll_item() -> String:
-	var rng = RandomNumberGenerator.new()
-	rng.seed = hash(Time.get_ticks_usec())
-	var nb = rng.randi_range(0, len(table) - 1)
+	var nb = Rng.rng.randi_range(0, len(table) - 1)
 	var item = table[nb]
 	return item
 
