@@ -7,9 +7,11 @@ var inventory = []
 var pot = 0
 
 var enemies = {
-	1 : {"health" : 5, "inventory" : ["D6"], "ImageLocation" : "res://assets/boss_fox.png"},
-	2 : {"health" : 30, "inventory" : ["D3", "D3", "D3"], "ImageLocation" : "res://assets/boss_racoon.png"},
-	3 : {"health" : 50, "inventory" : ["D6", "D12"], "ImageLocation" : "res://assets/boss_skunk.png"},
+	1 : {"health" : 5, "inventory" : ["D6"], "ImageLocation" : "res://assets/boss_ferret.png"},
+	2 : {"health" : 15, "inventory" : ["D6", "D3"], "ImageLocation" : "res://assets/boss_skunk.png"},
+	3 : {"health" : 30, "inventory" : ["D3", "D3", "D3"], "ImageLocation" : "res://assets/boss_racoon.png"},
+	4 : {"health" : 50, "inventory" : ["D6", "D12"], "ImageLocation" : "res://assets/boss_fox.png"},
+	5 : {"health" : PlayerData.health, "inventory" : PlayerData.inventory, "ImageLocation" : "res://assets/evil_duck.png"}
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -33,9 +35,11 @@ func _on_dice_damage_event(damage: int) -> void:
 			pot += tot - damage
 		if (hp <= 0):
 			PlayerData.add_health(pot)
-			GameData.level += 1
-			SceneManager.goto_loot()
-			
+			if (GameData.level <= 4):
+				GameData.level += 1
+				SceneManager.goto_loot()
+			else:
+				SceneManager.goto_win()
 
 
 func _on_tree_entered() -> void:
@@ -43,3 +47,5 @@ func _on_tree_entered() -> void:
 	inventory = enemies[GameData.level]["inventory"]
 	dice_count = len(inventory)
 	$EnemySprite.texture = load(enemies[GameData.level]["ImageLocation"])
+	if (GameData.level == 5):
+		$EnemySprite.position = Vector2(807.0, 148.0)
