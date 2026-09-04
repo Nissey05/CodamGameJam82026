@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c1r3o65r4c6r"]
+
+[ext_resource type="Script" uid="uid://t3p4ub682a8i" path="res://Start/retry_button.gd" id="1_j7oim"]
+
+[node name="Win" type="Node2D" unique_id=1809175277]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=412841897]
+offset_left = 344.0
+offset_top = 193.0
+offset_right = 1200.0
+offset_bottom = 479.0
+theme_override_font_sizes/normal_font_size = 200
+text = "You Win!"
+
+[node name="RestartButton" type="Button" parent="." unique_id=2069438983]
+offset_left = 504.0
+offset_top = 608.0
+offset_right = 1037.0
+offset_bottom = 785.0
+theme_override_font_sizes/font_size = 100
+text = "Play Again!"
+script = ExtResource("1_j7oim")
+
+[connection signal="pressed" from="RestartButton" to="RestartButton" method="_on_pressed"]

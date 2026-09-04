@@ -9,4 +9,3 @@ func _ready() -> void:
 func _on_dice_set_text(str: String) -> void:
 	visible = true
 	text = str
-	print("newText: ", str)

@@ -6,6 +6,8 @@ var table : Array = []
 
 var rolled_items : Array = []
 
+var hp = PlayerData.health
+
 signal items_rolled
 
 func _add_dice_to_table() -> void:
@@ -24,7 +26,6 @@ func _ready() -> void:
 	rolled_items.append(_roll_item())
 	rolled_items.append(_roll_item())
 	rolled_items.append(_roll_item())
-	$Shop/Chips.text = str(PlayerData.health)
 	items_rolled.emit()
 
 
@@ -39,10 +40,6 @@ func _roll_item() -> String:
 	var item = table[nb]
 	return item
 
-
-func _on_continue_pressed() -> void:
-	pass # Replace with function body.
-
-
 func _on__item_bought() -> void:
-	$Shop/Chips.text = str(PlayerData.health)
+	hp = PlayerData.health
+	$Health.draw_hp()
