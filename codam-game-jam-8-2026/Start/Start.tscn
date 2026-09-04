@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dcu5r1tgfjx1c"]
 
 [ext_resource type="Script" uid="uid://cnoec3dcmaqla" path="res://Start/start_button.gd" id="1_cha0i"]
-[ext_resource type="Script" uid="uid://deydsmhyvwdmx" path="res://Start/exit_button.gd" id="2_j0ik2"]
 
 [node name="Starts" type="Control" unique_id=1016202519]
 layout_mode = 3
@@ -24,14 +23,4 @@ theme_override_font_sizes/font_size = 100
 text = "START"
 script = ExtResource("1_cha0i")
 
-[node name="Button2" type="Button" parent="." unique_id=1616688960]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 7.0
-offset_right = 263.0
-offset_bottom = 134.0
-text = "EXIT"
-script = ExtResource("2_j0ik2")
-
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
