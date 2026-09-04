@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n65aqfne1pul"
-path="res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"
+uid="uid://cds7chvm8igh3"
+path="res://.godot/imported/boss_skunk.png-12796bc7b021258d3389c127ef18b2f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/duck_avatar_white.png"
-dest_files=["res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"]
+source_file="res://assets/boss_skunk.png"
+dest_files=["res://.godot/imported/boss_skunk.png-12796bc7b021258d3389c127ef18b2f1.ctex"]
 
 [params]
 

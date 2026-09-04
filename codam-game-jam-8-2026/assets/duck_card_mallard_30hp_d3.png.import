@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n65aqfne1pul"
-path="res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"
+uid="uid://ccxiwasm3um83"
+path="res://.godot/imported/duck_card_mallard_30hp_d3.png-ee2dcff7759d59d7c507c654fd577cc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/duck_avatar_white.png"
-dest_files=["res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"]
+source_file="res://assets/duck_card_mallard_30hp_d3.png"
+dest_files=["res://.godot/imported/duck_card_mallard_30hp_d3.png-ee2dcff7759d59d7c507c654fd577cc9.ctex"]
 
 [params]
 

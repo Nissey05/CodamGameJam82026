@@ -51,4 +51,4 @@ actionLeft={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.15750366, 0.273174, 0.073855214, 1)
+environment/defaults/default_clear_color=Color(0.108375125, 0.26892635, 0.248543, 1)

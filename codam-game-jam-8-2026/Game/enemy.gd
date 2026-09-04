@@ -7,9 +7,9 @@ var inventory = []
 var pot = 0
 
 var enemies = {
-	1 : {"health" : 5, "inventory" : ["D6"]},
-	2 : {"health" : 30, "inventory" : ["D3", "D3", "D3"]},
-	3 : {"health" : 50, "inventory" : ["D6", "D12"]}
+	1 : {"health" : 5, "inventory" : ["D6"], "ImageLocation" : "res://assets/boss_fox.png"},
+	2 : {"health" : 30, "inventory" : ["D3", "D3", "D3"], "ImageLocation" : "res://assets/boss_racoon.png"},
+	3 : {"health" : 50, "inventory" : ["D6", "D12"], "ImageLocation" : "res://assets/boss_skunk.png"},
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -42,3 +42,4 @@ func _on_tree_entered() -> void:
 	hp = enemies[GameData.level]["health"]
 	inventory = enemies[GameData.level]["inventory"]
 	dice_count = len(inventory)
+	$EnemySprite.texture = load(enemies[GameData.level]["ImageLocation"])

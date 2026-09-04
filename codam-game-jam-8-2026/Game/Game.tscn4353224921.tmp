@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://ch6faodwn51vu" path="res://assets/table.png" id="2_fuqhk"]
 [ext_resource type="Script" uid="uid://brb7ospdibcwt" path="res://Game/roll_button.gd" id="2_u44n3"]
 [ext_resource type="Script" uid="uid://i3wirw1ty01d" path="res://Game/enemy.gd" id="3_37esa"]
+[ext_resource type="Texture2D" uid="uid://4udtnab781q" path="res://assets/boss_fox.png" id="3_gp3ee"]
 [ext_resource type="Script" uid="uid://3lsim180rsme" path="res://Game/player.gd" id="5_fuqhk"]
 [ext_resource type="Script" uid="uid://cs0j7nm2gn7bo" path="res://Game/dice.gd" id="5_ghvq8"]
 [ext_resource type="Script" uid="uid://cpf56hr1bgygx" path="res://Game/health.gd" id="6_oscxy"]
 [ext_resource type="Texture2D" uid="uid://uqwdgqpoo5lo" path="res://assets/chip_white_1.png" id="9_gp3ee"]
 [ext_resource type="Script" uid="uid://b00tjesbvc7uo" path="res://Game/total_roll.gd" id="9_r0byk"]
 [ext_resource type="Texture2D" uid="uid://dt2st7nng7s44" path="res://assets/chip_red_5.png" id="10_r0byk"]
-[ext_resource type="Texture2D" uid="uid://c1tjoufah3hse" path="res://assets/duck_avatar_mallard.png" id="11_gp3ee"]
 [ext_resource type="Texture2D" uid="uid://be8supqryha37" path="res://assets/chip_green_25.png" id="11_hmm1m"]
 
 [node name="Game" type="Node2D" unique_id=2114010584]
@@ -25,6 +25,7 @@ script = ExtResource("3_37esa")
 visibility_layer = 524288
 position = Vector2(809.00006, 105)
 scale = Vector2(4.5, 4.5)
+texture = ExtResource("3_gp3ee")
 
 [node name="Dice" type="Control" parent="Enemy" unique_id=1062816976]
 layout_mode = 3
@@ -125,9 +126,6 @@ theme_override_font_sizes/normal_font_size = 50
 script = ExtResource("9_r0byk")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=298782113]
-position = Vector2(822, 851)
-scale = Vector2(4.5, 4.5)
-texture = ExtResource("11_gp3ee")
 
 [connection signal="player_damage" from="Enemy" to="Player" method="_on_enemy_player_damage"]
 [connection signal="tree_entered" from="Enemy" to="Enemy" method="_on_tree_entered"]

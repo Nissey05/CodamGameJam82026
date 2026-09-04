@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n65aqfne1pul"
-path="res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"
+uid="uid://ce7h1yooch4cw"
+path="res://.godot/imported/boss_racoon.png-99bd96484a29fae5ecdeb082902f68ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/duck_avatar_white.png"
-dest_files=["res://.godot/imported/duck_avatar_white.png-4ab50f22da6591bb532b2c34d00c7047.ctex"]
+source_file="res://assets/boss_racoon.png"
+dest_files=["res://.godot/imported/boss_racoon.png-99bd96484a29fae5ecdeb082902f68ce.ctex"]
 
 [params]
 

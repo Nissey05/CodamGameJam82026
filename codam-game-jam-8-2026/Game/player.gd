@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	$PlayerSprite.texture = load(PlayerData.sprite)
 
 var hp = PlayerData.health
 var dice_count = len(PlayerData.inventory)

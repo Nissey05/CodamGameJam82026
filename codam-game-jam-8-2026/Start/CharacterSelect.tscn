@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cxuqyodhhv16l"]
 
 [ext_resource type="Script" uid="uid://be584x06ktgx3" path="res://Start/CharacterSelectButton.gd" id="1_qoymb"]
+[ext_resource type="Texture2D" uid="uid://cs458j8jl2f46" path="res://assets/duck_card_white_10hp_d6.png" id="2_6erst"]
+[ext_resource type="Texture2D" uid="uid://2q2sdgbtmkfw" path="res://assets/duck_card_yellow_1hp_d20.png" id="3_xj30c"]
+[ext_resource type="Texture2D" uid="uid://ccxiwasm3um83" path="res://assets/duck_card_mallard_30hp_d3.png" id="4_bqgpk"]
+[ext_resource type="Texture2D" uid="uid://cd7ml303wboxo" path="res://assets/duck_card_brown_10hp_2d3.png" id="5_361k2"]
 
 [node name="CharacterSelect" type="Control" unique_id=914135635]
 layout_mode = 3
@@ -10,40 +14,48 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="1" type="Button" parent="." unique_id=1407465704]
+[node name="1" type="TextureButton" parent="." unique_id=2110904695]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 706.0
-offset_right = 306.0
-offset_bottom = 737.0
-text = "Select"
+offset_left = 40.0
+offset_top = 152.0
+offset_right = 120.0
+offset_bottom = 272.0
+scale = Vector2(4.5, 4.5)
+action_mode = 0
+texture_normal = ExtResource("2_6erst")
 script = ExtResource("1_qoymb")
 
-[node name="2" type="Button" parent="." unique_id=552311173]
+[node name="2" type="TextureButton" parent="." unique_id=752903535]
 layout_mode = 0
-offset_left = 427.0
-offset_top = 705.0
-offset_right = 525.0
-offset_bottom = 736.0
-text = "Select"
+offset_left = 424.0
+offset_top = 152.0
+offset_right = 504.0
+offset_bottom = 272.0
+scale = Vector2(4.5, 4.5)
+action_mode = 0
+texture_normal = ExtResource("3_xj30c")
 script = ExtResource("1_qoymb")
 
-[node name="3" type="Button" parent="." unique_id=801377479]
+[node name="3" type="TextureButton" parent="." unique_id=1769866279]
 layout_mode = 0
-offset_left = 693.0
-offset_top = 709.0
-offset_right = 791.0
-offset_bottom = 740.0
-text = "Select"
+offset_left = 808.0
+offset_top = 152.0
+offset_right = 888.0
+offset_bottom = 272.0
+scale = Vector2(4.5, 4.5)
+action_mode = 0
+texture_normal = ExtResource("4_bqgpk")
 script = ExtResource("1_qoymb")
 
-[node name="4" type="Button" parent="." unique_id=1659979413]
+[node name="4" type="TextureButton" parent="." unique_id=1184292861]
 layout_mode = 0
-offset_left = 945.0
-offset_top = 706.0
-offset_right = 1043.0
-offset_bottom = 737.0
-text = "Select"
+offset_left = 1192.0
+offset_top = 152.0
+offset_right = 1272.0
+offset_bottom = 272.0
+scale = Vector2(4.5, 4.5)
+action_mode = 0
+texture_normal = ExtResource("5_361k2")
 script = ExtResource("1_qoymb")
 
 [connection signal="pressed" from="1" to="1" method="_on_pressed"]
